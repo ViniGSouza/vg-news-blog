@@ -6,7 +6,7 @@ import PreviewBlogList from "@/components/PreviewBlogList";
 import BlogList from "@/components/BlogList";
 
 export const dynamicParams = true;
-export const revalidate = 30;
+export const revalidate = 60;
 
 const query = groq`
   *[_type=='post'] {
