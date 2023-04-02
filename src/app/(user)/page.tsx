@@ -1,9 +1,9 @@
 import { previewData } from "next/headers";
 import { groq } from "next-sanity";
 import { client } from "../../../lib/sanity.client";
-import PreviewSuspense from "../../pages/components/PreviewSuspense";
-import PreviewBlogList from "@/pages/components/PreviewBlogList";
-import BlogList from "@/pages/components/BlogList";
+import PreviewSuspense from "../../components/PreviewSuspense";
+import PreviewBlogList from "@/components/PreviewBlogList";
+import BlogList from "@/components/BlogList";
 
 const query = groq`
   *[_type=='post'] {

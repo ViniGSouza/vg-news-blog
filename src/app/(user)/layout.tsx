@@ -1,7 +1,7 @@
 import { Rubik } from "next/font/google";
-import Header from "@/pages/components/Header";
+import Header from "@/components/Header";
 import "../../styles/globals.css";
-import Banner from "@/pages/components/Banner";
+import Banner from "@/components/Banner";
 
 export const metadata = {
   title: 'VG News - Your Tech Blog',

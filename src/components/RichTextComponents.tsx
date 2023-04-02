@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import urlFor from "../../../lib/urlFor";
+import urlFor from "../../lib/urlFor";
 
-const RichTextComponents = {
+export const RichTextComponents = {
   types: {
     images: ({ value }: any) => {
       return (
@@ -61,5 +61,3 @@ const RichTextComponents = {
     },
   },
 };
-
-export default RichTextComponents;
