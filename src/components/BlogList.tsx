@@ -11,7 +11,6 @@ export default function BlogList({ posts }: Props) {
   return (
     <div>
       <hr className="border-[#5703d6] mb-10" />
-
       <div className="grid grid-cols-1 gap-10 px-10 pb-24 md:grid-cols-2 gap-y-16">
         {/* Posts */}
         {posts.map(post => (

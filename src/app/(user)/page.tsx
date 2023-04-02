@@ -5,6 +5,9 @@ import PreviewSuspense from "../../components/PreviewSuspense";
 import PreviewBlogList from "@/components/PreviewBlogList";
 import BlogList from "@/components/BlogList";
 
+export const dynamicParams = true;
+export const revalidate = 30;
+
 const query = groq`
   *[_type=='post'] {
     ...,
