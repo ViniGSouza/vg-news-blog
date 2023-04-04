@@ -49,7 +49,7 @@ export default function BlogList({ posts }: Props) {
                   <p className="my-5 text-3xl font-bold">{post.title}</p>
                   <p className="text-gray-500 line-clamp-4">{post.short_text}</p>
                   <p className="flex items-center mt-3 font-bold group-hover:underline">
-                  Read Post
+                  Leia o post
                   <ArrowUpRightIcon className="w-4 h-4 ml-2" />
                 </p>
                 </div>
