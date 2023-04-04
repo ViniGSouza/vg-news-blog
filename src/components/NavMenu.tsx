@@ -75,32 +75,32 @@ export default function NavMenu() {
     {/* Menu MOBAL */}
     <NavigationMenu.Root className="relative z-[100] w-full lg:hidden">
     <NavigationMenu.List className={`${toggle ? 'block' : 'hidden'}`}>
-    <NavigationMenu.Item className="text-white hover:text-[#00bcff] group flex select-none items-center justify-between gap-[2px] rounded-[4px] text-[15px] font-normal leading-none outline-none focus:shadow-[0_0_0_2px]">
-        <Link href='/' className="py-3">
+    <NavigationMenu.Item className="text-white hover:text-[#00bcff] group flex select-none items-center justify-between gap-[2px] text-[15px] font-normal leading-none outline-none focus:shadow-[0_0_0_2px] border-b-[1px] border-[#00bcff]">
+        <Link href='/' className="w-full py-4">
           CATEGORIAS
         </Link>
       </NavigationMenu.Item>
 
-      <NavigationMenu.Item className="text-white hover:text-[#00bcff] group flex select-none items-center justify-between gap-[2px] rounded-[4px] text-[15px] font-normal leading-none outline-none focus:shadow-[0_0_0_2px]">
-        <Link href='/' className="py-3">
+      <NavigationMenu.Item className="text-white hover:text-[#00bcff] group flex select-none items-center justify-between gap-[2px] text-[15px] font-normal leading-none outline-none focus:shadow-[0_0_0_2px] border-b-[1px] border-[#00bcff]">
+        <Link href='/' className="w-full py-4">
           ÚLTIMAS NOTÍCIAS
         </Link>
       </NavigationMenu.Item>
 
-      <NavigationMenu.Item className="text-white hover:text-[#00bcff] group flex select-none items-center justify-between gap-[2px] rounded-[4px] text-[15px] font-normal leading-none outline-none focus:shadow-[0_0_0_2px]">
-        <Link href='/' className="py-3">
+      <NavigationMenu.Item className="text-white hover:text-[#00bcff] group flex select-none items-center justify-between gap-[2px] text-[15px] font-normal leading-none outline-none focus:shadow-[0_0_0_2px] border-b-[1px] border-[#00bcff]">
+        <Link href='/' className="w-full py-4">
           TUTORIAIS
         </Link>
       </NavigationMenu.Item>
 
-      <NavigationMenu.Item className="text-white hover:text-[#00bcff] group flex select-none items-center justify-between gap-[2px] rounded-[4px] text-[15px] font-normal leading-none outline-none focus:shadow-[0_0_0_2px]">
-        <Link href='/' className="py-3">
+      <NavigationMenu.Item className="text-white hover:text-[#00bcff] group flex select-none items-center justify-between gap-[2px] text-[15px] font-normal leading-none outline-none focus:shadow-[0_0_0_2px] border-b-[1px] border-[#00bcff]">
+        <Link href='/' className="w-full py-4">
           CURSOS
         </Link>
       </NavigationMenu.Item>
 
-      <NavigationMenu.Item className="text-white hover:text-[#00bcff] group flex select-none items-center justify-between gap-[2px] rounded-[4px] text-[15px] font-normal leading-none outline-none focus:shadow-[0_0_0_2px]">
-        <Link href='/' className="py-3">
+      <NavigationMenu.Item className="text-white hover:text-[#00bcff] group flex select-none items-center justify-between gap-[2px] text-[15px] font-normal leading-none outline-none focus:shadow-[0_0_0_2px]">
+        <Link href='/' className="w-full py-4">
           COLUNAS
         </Link>
       </NavigationMenu.Item>
