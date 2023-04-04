@@ -4,6 +4,9 @@ import Image from "next/image";
 import urlFor from "../../../../../lib/urlFor";
 import { PortableText } from "@portabletext/react";
 import { RichTextComponents } from "@/components/RichTextComponents";
+import { BsArrowRightCircleFill } from "react-icons/bs";
+import Link from "next/link";
+import logo from "../../../../../public/logo.png";
 
 type Props = {
   params: {
@@ -38,61 +41,98 @@ async function Post({ params: { slug } }: Props) {
   const post: Post = await client.fetch(query, { slug });
 
   return (
-    <article className="px-10 pb-28">
-      <section className="space-y-2 border-[#5703d6] text-white">
-        <div className="relative flex flex-col justify-between min-h-56 md:flex-row">
-          <div className="absolute top-0 w-full h-full p-10 opacity-10 blur-sm">
+    <article className="mt-40 text-white dropshadow">
+      <div className="flex flex-col md:flex-row">
+        <div className="gap-10 mx-4 md:mx-0 px-10 py-10 rounded gap-y-16 bg-[#0D0F12] shadow-md">
+          <h1 className="text-4xl font-extrabold">{post.title}</h1>
+          <p>
+            {new Date(post._createdAt).toLocaleDateString("pt-BR", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
+          </p>
+          <div className="mt-4">
             <Image
               src={urlFor(post.mainImage).url()}
               alt={post.author.name}
-              fill
-              className="object-cover object-center mx-auto"
+              width={1200}
+              height={0}
             />
           </div>
-          <section className="p-5 bg-[#5703d6] w-full">
-            <div className="flex flex-col justify-between md:flex-row gap-y-5">
-              <div>
-                <h1 className="text-4xl font-extrabold">{post.title}</h1>
-                <p>
-                  {new Date(post._createdAt).toLocaleDateString("pt-BR", {
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric",
-                  })}
-                </p>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Image
-                  src={urlFor(post.author.image).url()}
-                  alt={post.author.name}
-                  height={40}
-                  width={40}
-                  className="rounded-full"
-                />
-                <div className="w-64">
-                  <h3 className="text-lg font-bold">{post.author.name}</h3>
-                  <div></div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h2 className="pt-10 italic">{post.short_text}</h2>
-              <div className="flex items-center justify-end mt-auto space-x-2">
-                {post.categories.map((category) => (
-                  <p
-                    key={category._id}
-                    className="px-3 py-1 mt-4 text-sm font-semibold text-white bg-gray-800 rounded-full"
-                  >
-                    {category.title}
-                  </p>
-                ))}
-              </div>
-            </div>
-          </section>
+          <PortableText value={post.body} components={RichTextComponents} />
         </div>
-      </section>
-      <PortableText value={post.body} components={RichTextComponents} />
+        <div className="bg-[#0D0F12] mx-4 md:mx-0 md:ml-5 md:w-full md:max-w-[300px] max-h-[820px] shadow-md py-10 px-6">
+          <h3 className="text-3xl text-white">BUSCAR</h3>
+          <input
+            type="text"
+            placeholder="Digite aqui..."
+            className="bg-[#0d0f12] border-[#00bcff] border-[1px] rounded mt-3 w-full pl-2 py-1 text-white"
+          />
+          <h3 className="mt-10 mb-5 pb-3 text-3xl text-white border-b-[1px] border-[#00bcff]">DESTAQUES</h3>
+            <ul>
+              <li className="my-5">
+              <Link href="/">
+                <Image src={logo} alt="destaque"/>
+              </Link>
+              </li>
+              <li className="my-5">
+              <Link href="/">
+                <Image src={logo} alt="destaque"/>
+              </Link>
+              </li>
+              <li className="my-5">
+              <Link href="/">
+                <Image src={logo} alt="destaque"/>
+              </Link>
+              </li>
+              <li className="my-5">
+              <Link href="/">
+                <Image src={logo} alt="destaque"/>
+              </Link>
+              </li>
+            </ul>
+            <h3 className="mt-10 mb-5 pb-3 text-3xl text-white border-b-[1px] border-[#00bcff]">TUTORIAIS</h3>
+            <ul>
+              <li className="my-2">
+              <Link href="/">
+                <p className="flex items-center text-lg text-white uppercase">
+                  <BsArrowRightCircleFill className="text-[#00bcff] mr-2" />Tutorial - 1</p>
+              </Link>
+              </li>
+              <li className="my-2">
+              <Link href="/">
+                <p className="flex items-center text-lg text-white uppercase">
+                  <BsArrowRightCircleFill className="text-[#00bcff] mr-2" />Tutorial - 2</p>
+              </Link>
+              </li>
+              <li className="my-2">
+              <Link href="/">
+                <p className="flex items-center text-lg text-white uppercase">
+                  <BsArrowRightCircleFill className="text-[#00bcff] mr-2" />Tutorial - 3</p>
+              </Link>
+              </li>
+              <li className="my-2">
+              <Link href="/">
+                <p className="flex items-center text-lg text-white uppercase">
+                  <BsArrowRightCircleFill className="text-[#00bcff] mr-2" />Tutorial - 4</p>
+              </Link>
+              </li>
+              <li className="my-2">
+              <Link href="/">
+                <p className="flex items-center text-lg text-white uppercase">
+                  <BsArrowRightCircleFill className="text-[#00bcff] mr-2" />Tutorial - 5</p>
+              </Link>
+              </li>
+              <li className="my-2">
+              <Link href="/">
+                <p className="flex items-center text-lg text-white uppercase">
+                  <BsArrowRightCircleFill className="text-[#00bcff] mr-2" />Tutorial - 6</p>
+              </Link>
+              </li>
+            </ul>
+        </div>
+      </div>
     </article>
   );
 }

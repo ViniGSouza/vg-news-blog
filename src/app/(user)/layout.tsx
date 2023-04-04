@@ -1,7 +1,6 @@
 import { Rubik } from "next/font/google";
 import Header from "@/components/Header";
 import "../../styles/globals.css";
-import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
 
 export const metadata = {
@@ -18,10 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={`${rubik.className} max-w-7xl mx-auto`}>
+      <body className={`${rubik.className} bg-[#0B1118]`}>
         <Header />
-        <Banner />
+        <div className="mx-auto mb-4 mt-36 max-w-7xl">
           {children}
+        </div>
         <Footer />
       </body>
     </html>
