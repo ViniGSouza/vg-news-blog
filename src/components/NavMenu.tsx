@@ -65,14 +65,14 @@ export default function NavMenu() {
       </div>
     </NavigationMenu.Root>
 
-    <div className="flex items-center justify-between py-2 text-lg text-white lg:hidden px-4">
+    <div className="flex items-center justify-between px-4 py-2 text-lg text-white lg:hidden">
       <span className="font-medium">MENU</span>
       <label className="relative block cursor-pointer text-[20px] select-none">
-      <input type="checkbox" className="absolute cursor-pointer h-0 w-0" onClick={(e) => {e.preventDefault; setToggle(!toggle)}}/>
+      <input type="checkbox" className="absolute w-0 h-0 cursor-pointer" onClick={(e) => {e.preventDefault; setToggle(!toggle)}}/>
       <div className="relative top-0 left-0 h-[1.3em] w-[1.3em]">
-        <span className={`w-[32px] h-[2px] bg-white absolute ease-in-out duration-[300ms] ${toggle ? 'top-[50%] translate-y-[-50%] rotate-45' : 'top-[10%]' }`}></span>
-        <span className={`w-[32px] h-[2px] bg-white absolute ease-in-out duration-[300ms] ${toggle ? 'top-[50%] translate-y-[-50%] -rotate-45' : 'top-[50%]' }`}></span>
-        <span className={`w-[32px] h-[2px] bg-white absolute ease-in-out duration-[300ms] top-[90%] ${toggle ? 'translate-x-[-50px] opacity-0' : 'opacity-1' }`}></span>
+        <span className={`w-[32px] h-[2px] bg-white absolute ease-in-out duration-[300ms] ${toggle ? 'top-[50%] translate-y-[-50%] rotate-45' : 'top-[12%]' }`}></span>
+        <span className={`w-[32px] h-[2px] bg-white absolute ease-in-out duration-[300ms] ${toggle ? 'top-[50%] translate-y-[-50%] -rotate-45' : 'top-[45%]' }`}></span>
+        <span className={`w-[32px] h-[2px] bg-white absolute ease-in-out duration-[300ms] top-[80%] ${toggle ? 'translate-x-[-50px] opacity-0' : 'opacity-1' }`}></span>
       </div>
       </label>
     </div>
