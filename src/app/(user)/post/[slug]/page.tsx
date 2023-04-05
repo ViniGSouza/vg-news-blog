@@ -53,7 +53,14 @@ async function Post({ params: { slug } }: Props) {
               year: "numeric",
             })}
           </p>
-          <div className="mt-4">
+          <p className="mt-4">
+            {post.categories.map(category => (
+              <span className="bg-[#00ccff] px-2 py-1 rounded mr-3" key={category._id}>{category.title}</span>
+              )
+            )}
+          Publicado por: <b><i>{post.author.name}</i></b>
+          </p>
+          <div className="mt-5">
             <Image
               src={urlFor(post.mainImage).url()}
               alt={post.author.name}

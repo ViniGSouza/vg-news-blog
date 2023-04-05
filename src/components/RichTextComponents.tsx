@@ -29,20 +29,23 @@ export const RichTextComponents = {
   },
   block: {
     h1: ({ children }: any) => (
-      <h1 className="py-10 text-5xl font-bold">{children}</h1>
+      <h1 className="py-6 text-5xl font-bold">{children}</h1>
     ),
     h2: ({ children }: any) => (
-      <h2 className="py-10 text-4xl font-bold">{children}</h2>
+      <h2 className="py-4 text-4xl font-bold">{children}</h2>
     ),
     h3: ({ children }: any) => (
-      <h3 className="py-10 text-3xl font-bold">{children}</h3>
+      <h3 className="py-4 text-3xl font-bold">{children}</h3>
     ),
     h4: ({ children }: any) => (
-      <h4 className="py-10 text-2xl font-bold">{children}</h4>
+      <h4 className="py-4 text-2xl font-bold">{children}</h4>
     ),
     blockquote: ({ children }: any) => (
-      <blockquote className="border-l-[#5703d6]">{children}</blockquote>
+      <blockquote className="border-[#00ccff] border-l-2 pl-3">{children}</blockquote>
     ),
+    normal: ({ children }: any) => (
+      <p className="py-3">{children}</p>
+    )
   },
   marks: {
     link: ({ children, value }: any) => {
