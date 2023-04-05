@@ -4,9 +4,6 @@ import Image from "next/image";
 import urlFor from "../../../../../lib/urlFor";
 import { PortableText } from "@portabletext/react";
 import { RichTextComponents } from "@/components/RichTextComponents";
-import { BsArrowRightCircleFill } from "react-icons/bs";
-import Link from "next/link";
-import logo from "../../../../../public/logo.png";
 import SideBar from "@/components/SideBar";
 
 type Props = {
@@ -58,7 +55,9 @@ async function Post({ params: { slug } }: Props) {
               <span className="bg-[#00ccff] px-2 py-1 rounded mr-3" key={category._id}>{category.title}</span>
               )
             )}
-          Publicado por: <b><i>{post.author.name}</i></b>
+            <span className="block mt-3 md:mt-0 md:inline-flex">
+              Publicado por: <b><i>{post.author.name}</i></b>
+            </span>
           </p>
           <div className="mt-5">
             <Image

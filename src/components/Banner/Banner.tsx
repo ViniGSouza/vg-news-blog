@@ -40,8 +40,8 @@ export default function Banner({ posts }: Props) {
         className="rounded mySwiper"
       >
         {latestPosts.map((post) => (
-            <SwiperSlide className="flex flex-col w-full cursor-pointer group">
-              <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
+            <SwiperSlide className="flex flex-col w-full cursor-pointer group" key={post._id}>
+              <ClientSideRoute route={`/post/${post.slug.current}`}>
                 <Image
                   className="relative object-cover object-center lg:object-center"
                   src={urlFor(post.mainImage).url()}
