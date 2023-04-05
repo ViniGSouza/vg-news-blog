@@ -69,7 +69,7 @@ export default function NavMenu() {
       <span className="font-medium">MENU</span>
       <label className="relative block cursor-pointer text-[20px] select-none">
       <input type="checkbox" className="absolute w-0 h-0 cursor-pointer" onClick={(e) => {e.preventDefault; setToggle(!toggle)}}/>
-      <div className="relative top-0 left-0 h-[1.3em] w-[1.3em]">
+      <div className="relative top-0 right-1 h-[1.3em] w-[1.3em]">
         <span className={`w-[32px] h-[2px] bg-white absolute ease-in-out duration-[300ms] ${toggle ? 'top-[50%] translate-y-[-50%] rotate-45' : 'top-[12%]' }`}></span>
         <span className={`w-[32px] h-[2px] bg-white absolute ease-in-out duration-[300ms] ${toggle ? 'top-[50%] translate-y-[-50%] -rotate-45' : 'top-[45%]' }`}></span>
         <span className={`w-[32px] h-[2px] bg-white absolute ease-in-out duration-[300ms] top-[80%] ${toggle ? 'translate-x-[-50px] opacity-0' : 'opacity-1' }`}></span>
@@ -79,7 +79,7 @@ export default function NavMenu() {
     
     {/* Menu MOBAL */}
     <NavigationMenu.Root className="relative z-[100] w-full lg:hidden">
-    <NavigationMenu.List className={`${toggle && 'block h-screen overflow-y-auto visible'} h-0 top-[1px] overflow-y-hidden absolute right-0 ease-linear duration-300 z-[1000] bg-[#101822] px-4 w-full`}>
+    <NavigationMenu.List className={`${toggle && 'block h-screen overflow-y-auto visible'} h-0 top-[0.5px] overflow-y-hidden absolute right-0 ease-linear duration-300 z-[1000] bg-[#101822] px-4 w-full`}>
     <NavigationMenu.Item className="text-white hover:text-[#00bcff] group flex select-none items-center justify-between gap-[2px] text-[15px] font-normal leading-none outline-none focus:shadow-[0_0_0_2px] border-b-[1px] border-[#00bcff]">
         <Link href='/' className="w-full py-4" onClick={(e) => {e.preventDefault; setToggle(!toggle)}}>
           CATEGORIAS
