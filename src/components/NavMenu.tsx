@@ -2,8 +2,6 @@ import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { CaretDownIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import { useState } from 'react';
-import { GiHamburgerMenu } from "react-icons/gi";
-
 
 
 export default function NavMenu() {
@@ -67,40 +65,47 @@ export default function NavMenu() {
       </div>
     </NavigationMenu.Root>
 
-    <div className="flex items-center justify-between py-2 text-lg text-white lg:hidden">
+    <div className="flex items-center justify-between py-2 text-lg text-white lg:hidden px-4">
       <span className="font-medium">MENU</span>
-      <GiHamburgerMenu className="cursor-pointer" onClick={(e) => {e.preventDefault; setToggle(!toggle)}}/>
+      <label className="relative block cursor-pointer text-[20px] select-none">
+      <input type="checkbox" className="absolute cursor-pointer h-0 w-0" onClick={(e) => {e.preventDefault; setToggle(!toggle)}}/>
+      <div className="relative top-0 left-0 h-[1.3em] w-[1.3em]">
+        <span className={`w-[32px] h-[2px] bg-white absolute ease-in-out duration-[300ms] ${toggle ? 'top-[50%] translate-y-[-50%] rotate-45' : 'top-[10%]' }`}></span>
+        <span className={`w-[32px] h-[2px] bg-white absolute ease-in-out duration-[300ms] ${toggle ? 'top-[50%] translate-y-[-50%] -rotate-45' : 'top-[50%]' }`}></span>
+        <span className={`w-[32px] h-[2px] bg-white absolute ease-in-out duration-[300ms] top-[90%] ${toggle ? 'translate-x-[-50px] opacity-0' : 'opacity-1' }`}></span>
+      </div>
+      </label>
     </div>
     
     {/* Menu MOBAL */}
     <NavigationMenu.Root className="relative z-[100] w-full lg:hidden">
-    <NavigationMenu.List className={`${toggle ? 'block' : 'hidden'}`}>
+    <NavigationMenu.List className={`${toggle && 'block h-screen overflow-y-auto visible'} h-0 top-[1px] overflow-y-hidden absolute right-0 ease-linear duration-300 z-[1000] bg-[#101822] px-4 w-full`}>
     <NavigationMenu.Item className="text-white hover:text-[#00bcff] group flex select-none items-center justify-between gap-[2px] text-[15px] font-normal leading-none outline-none focus:shadow-[0_0_0_2px] border-b-[1px] border-[#00bcff]">
-        <Link href='/' className="w-full py-4">
+        <Link href='/' className="w-full py-4" onClick={(e) => {e.preventDefault; setToggle(!toggle)}}>
           CATEGORIAS
         </Link>
       </NavigationMenu.Item>
 
       <NavigationMenu.Item className="text-white hover:text-[#00bcff] group flex select-none items-center justify-between gap-[2px] text-[15px] font-normal leading-none outline-none focus:shadow-[0_0_0_2px] border-b-[1px] border-[#00bcff]">
-        <Link href='/' className="w-full py-4">
+        <Link href='/' className="w-full py-4" onClick={(e) => {e.preventDefault; setToggle(!toggle)}}>
           ÚLTIMAS NOTÍCIAS
         </Link>
       </NavigationMenu.Item>
 
       <NavigationMenu.Item className="text-white hover:text-[#00bcff] group flex select-none items-center justify-between gap-[2px] text-[15px] font-normal leading-none outline-none focus:shadow-[0_0_0_2px] border-b-[1px] border-[#00bcff]">
-        <Link href='/' className="w-full py-4">
+        <Link href='/' className="w-full py-4" onClick={(e) => {e.preventDefault; setToggle(!toggle)}}>
           TUTORIAIS
         </Link>
       </NavigationMenu.Item>
 
       <NavigationMenu.Item className="text-white hover:text-[#00bcff] group flex select-none items-center justify-between gap-[2px] text-[15px] font-normal leading-none outline-none focus:shadow-[0_0_0_2px] border-b-[1px] border-[#00bcff]">
-        <Link href='/' className="w-full py-4">
+        <Link href='/' className="w-full py-4" onClick={(e) => {e.preventDefault; setToggle(!toggle)}}>
           CURSOS
         </Link>
       </NavigationMenu.Item>
 
       <NavigationMenu.Item className="text-white hover:text-[#00bcff] group flex select-none items-center justify-between gap-[2px] text-[15px] font-normal leading-none outline-none focus:shadow-[0_0_0_2px]">
-        <Link href='/' className="w-full py-4">
+        <Link href='/' className="w-full py-4" onClick={(e) => {e.preventDefault; setToggle(!toggle)}}>
           COLUNAS
         </Link>
       </NavigationMenu.Item>
